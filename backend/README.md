@@ -239,7 +239,7 @@ curl -X POST http://127.0.0.1:5000/questions -d '{"searchTerm" : "test"}' -H 'Co
 
 Create new Question
 ```bash
-curl -X POST http://127.0.0.1:5000/questions -d '{ "question" : "This a test question?", "category" : "3" , "answer" : "Yes", "difficulty" : 1 }' -H 'Content-Type: application/json'
+curl -X POST http://127.0.0.1:5000/questions -d '{ "question" : "This a test question?", "category" : 3 , "answer" : "Yes", "difficulty" : 1 }' -H 'Content-Type: application/json'
 ```
 
 - Searches database for questions with a search term, if provided. Otherwise,
@@ -251,7 +251,7 @@ it will insert a new question into the database.
   - if you want to **insert** (_application/json_) 
        1. **string** `question` (*required)
        2. **string** `answer` (*required)
-       3. **string** `category` (*required)
+       3. **integer** `category` (*required)
        4. **integer** `difficulty` (*required)
 - Returns: 
   - if you searched:
@@ -259,7 +259,7 @@ it will insert a new question into the database.
         - **integer** `id`
         - **string** `question`
         - **string** `answer`
-        - **string** `category`
+        - **integer** `category`
         - **integer** `difficulty`
     2. List of dict of ``current_category`` with following fields:
         - **integer** `id`
@@ -271,7 +271,7 @@ it will insert a new question into the database.
         - **integer** `id` 
         - **string** `question`
         - **string** `answer`
-        - **string** `category`
+        - **integer** `category`
         - **integer** `difficulty`
     2. **integer** `total_questions`
     3. **integer** `created`  id of inserted question
@@ -363,7 +363,7 @@ will return
 
 If you try to insert a new `question`, but forget to provide a required field, it will throw an `400` error:
 ```bash
-curl -X POST http://127.0.0.1:5000/questions -d '{ "question" : "a question without provided any answer possible?", "category" : "1" , "difficulty" : 1 }' -H 'Content-Type: application/json'
+curl -X POST http://127.0.0.1:5000/questions -d '{ "question" : "a question without provided any answer possible?", "category" : 1, "difficulty" : 1 }' -H 'Content-Type: application/json'
 ```
 
 will return
@@ -422,7 +422,7 @@ will return
 
 Play quiz game.
 ```bash
-curl -X POST http://127.0.0.1:5000/quizzes -d '{"previous_questions" : [1, 3], "quiz_category" : {"type" : "Science", "id" : "1"}} ' -H 'Content-Type: application/json'
+curl -X POST http://127.0.0.1:5000/quizzes -d '{"previous_questions" : [1, 3], "quiz_category" : {"type" : "Science", "id" : 1}} ' -H 'Content-Type: application/json'
 ```
 - Plays quiz game by mantaining a list of already asked questions and a category to ask question from, in random order.
 - Request Arguments: **None**
@@ -459,7 +459,7 @@ curl -X POST http://127.0.0.1:5000/quizzes -d '{"previous_questions" : [1, 3], "
 If you try to play the quiz game without a valid JSON body, it will response with an  `400` error.
 
 ```bash
-curl -X POST http://127.0.0.1:5000/quizzes
+curl -X POST http://127.0.0.1:5000/quizzes -d '{"previous_questions" : []} ' -H 'Content-Type: application/json'
 ```
 will return
 ```js
@@ -476,7 +476,7 @@ will return
 Fetch all available categories
 
 ```bash
-curl -X POST http://127.0.0.1:5000/quizzes -d '{"previous_questions" : []} ' -H 'Content-Type: application/json'
+curl -X GET http://127.0.0.1:5000/categories
 ```
 
 - Fetches a list of all `categories` with its `type` as values.
@@ -522,7 +522,7 @@ curl -X GET http://127.0.0.1:5000/categories/2/questions?page=1
      - **integer** `id` 
      - **string** `question`
      - **string** `answer`
-     - **string** `category`
+     - **integer** `category`
      - **integer** `difficulty`
   3. **integer** `total_questions`
   4. **boolean** `success`
