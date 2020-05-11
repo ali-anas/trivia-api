@@ -15,8 +15,8 @@ Trivia is a simple question and answer quiz game.It provides you following featu
 The main motivation of the project is learn how to design, develop and document the RESTful APIs 
 Completing this trivia app give me the ability to structure plan, implement, and test an API which are consumed by the frontend of the application, and can also be consumed by other other authorised resources.
 
-Each module of backend code is implemented by following 'Test-Driven-Development'. 
-Each endpoint is unit-tested to check the expected behaviour and error handling for the different types of requests.
+Each module of backend code is implemented by following **'Test-Driven-Development'**. 
+Each endpoint is **Unit-Tested** to check the expected behaviour and error handling for the different types of requests.
 
 Here is development strategy i followed -
 1. Write and formulate test (keeping in my the end goal of each module and associated errors that could be encountered)
@@ -67,7 +67,7 @@ Here is development strategy i followed -
 	The setup guide is provided in each deirectory-
 
 > _tip_: this frontend is designed to work with [Flask-based Backend](../backend). It is recommended you stand up the backend first, test using Postman or curl, update the endpoints in the frontend, and then the frontend should integrate smoothly.
-  
+
 1. [`./frontend/`](./frontend/README.md)
 2. [`./backend/`](./backend/README.md)
 
