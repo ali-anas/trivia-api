@@ -62,10 +62,12 @@ Here is development strategy i followed -
 
 
 ## Setup
-	To setup project locally you have to setup `front-end` and 'back-end' separately.
-	I prefer to setup backend first because front-end server is served by back-end server.
 
+	To setup project locally you have to setup `front-end` and 'back-end' separately.
 	The setup guide is provided in each deirectory-
+
+> _tip_: this frontend is designed to work with [Flask-based Backend](../backend). It is recommended you stand up the backend first, test using Postman or curl, update the endpoints in the frontend, and then the frontend should integrate smoothly.
+  
 1. [`./frontend/`](./frontend/README.md)
 2. [`./backend/`](./backend/README.md)
 
