@@ -12,10 +12,10 @@ Trivia is a simple question and answer quiz game.It provides you following featu
 
 ## Motivation
 
-The main motivation of the project is learn how to design, develop and document the RESTful APIs 
+The main motivation of the project is learn how to design, develop and document the **RESTful APIs** 
 Completing this trivia app give me the ability to structure plan, implement, and test an API which are consumed by the frontend of the application, and can also be consumed by other other authorised resources.
 
-Each module of backend code is implemented by following **'Test-Driven-Development'**. 
+Each module of backend code is implemented by following **Test-Driven-Development**. 
 Each endpoint is **Unit-Tested** to check the expected behaviour and error handling for the different types of requests.
 
 Here is development strategy i followed -
