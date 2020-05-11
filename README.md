@@ -30,43 +30,43 @@ Here is development strategy i followed -
 
 ```
  maindirectory
-  ├── README.md
-  ├── backend `Contains API and test suit.`
-  |   |
-  │   ├── README.md ***Contains backend server setup and API documentation`***
-  |   |
-  │   ├── config.py Contains information for database connection**
-  |   |
-  │   ├── models.py
-  |   |
-  │   ├── flaskr
-  │   │   └── __init__.py **App creation & API endpoints.**
-  |   |
-  │   ├── requirements.txt **The dependencies to be installed with "pip3 install -r requirements.txt"**
-  |   |
-  │   └── test_flaskr.py **22 unittests to check expected behaviour from API**
-  |   |
-  │   └── trivia.psql **database dumb, restore with "psql trivia < trivia.psql"**
   |
-  └── frontend **start frontend with "npm start"**
+  ├── README.md
+  |
+  ├── /backend  Contains API and test suit
+  |   |
+  │   ├── README.md  Contains backend server setup and API documentation
+  |   |
+  │   ├── config.py  Contains information for database connection
+  |   |
+  │   ├── models.py  Contains the models of backend.
+  |   |
+  │   ├── /flaskr
+  |   |   |
+  │   │   └── __init__.py  App creation & API endpoints controllers
+  |   |
+  │   ├── requirements.txt  The dependencies to be installed with "pip3 install -r requirements.txt
+  |   |
+  │   └── test_flaskr.py  21 unittests to check expected behaviour from API
+  |   |
+  │   └── trivia.psql  database file, restore it with "psql trivia < trivia.psql"
+  |
+  └── /frontend  start frontend with "npm start"**
       |
-      ├── README.md **Contains Frontend Setup**
+      ├── README.md  Contains Frontend Setup
       |
-      └── src
-          └── components **Contains React Components**
+      └── /src
+          |
+          └── components Contains React Components
 ```
 
 
-## Tasks
+## Setup
+	To setup project locally you have to setup `front-end` and 'back-end' separately.
+	I prefer to setup backend first because front-end server is served by back-end server.
 
-
+	The setup guide is provided in each deirectory-
 1. [`./frontend/`](./frontend/README.md)
 2. [`./backend/`](./backend/README.md)
- 
-
-### Backend
-
-The `./backend` directory contains a partially completed Flask and SQLAlchemy server. You will work primarily in app.py to define your endpoints and can reference models.py for DB and SQLAlchemy setup. 
 
 
-[View the README.md within ./frontend for more details.](./frontend/README.md)
