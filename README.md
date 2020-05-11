@@ -31,11 +31,11 @@ Here is development strategy i followed -
 ```
  maindirectory
   ├── README.md
-  ├── backend **Contains API and test suit.**
+  ├── backend `Contains API and test suit.`
   |   |
-  │   ├── README.md **Contains backend server setup and API documentation**
+  │   ├── README.md ***Contains backend server setup and API documentation`***
   |   |
-  │   ├── config.py **Contains information for database connection**
+  │   ├── config.py Contains information for database connection**
   |   |
   │   ├── models.py
   |   |
