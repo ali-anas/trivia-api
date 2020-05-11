@@ -31,29 +31,29 @@ Here is development strategy i followed -
 ```
  maindirectory
   ├── README.md
-  ├── backend *** Contains API and test suit. 
+  ├── backend **Contains API and test suit.**
   |   |
-  │   ├── README.md *** Contains backend server setup and API documentation
+  │   ├── README.md **Contains backend server setup and API documentation**
   |   |
-  │   ├── config.py *** Contains information for database connection
+  │   ├── config.py **Contains information for database connection**
   |   |
   │   ├── models.py
   |   |
   │   ├── flaskr
-  │   │   └── __init__.py *** App creation & API endpoints.
+  │   │   └── __init__.py **App creation & API endpoints.**
   |   |
-  │   ├── requirements.txt *** The dependencies to be installed with "pip3 install -r requirements.txt"
+  │   ├── requirements.txt **The dependencies to be installed with "pip3 install -r requirements.txt"**
   |   |
-  │   └── test_flaskr.py *** 22 unittests to check expected behaviour from API
+  │   └── test_flaskr.py **22 unittests to check expected behaviour from API**
   |   |
-  │   └── trivia.psql *** database dumb, restore with "psql trivia < trivia.psql"
+  │   └── trivia.psql **database dumb, restore with "psql trivia < trivia.psql"**
   |
-  └── frontend *** start frontend with "npm start"
+  └── frontend **start frontend with "npm start"**
       |
-      ├── README.md *** Contains Frontend Setup 
+      ├── README.md **Contains Frontend Setup**
       |
       └── src
-          └── components *** Contains React Components
+          └── components **Contains React Components**
 ```
 
 
